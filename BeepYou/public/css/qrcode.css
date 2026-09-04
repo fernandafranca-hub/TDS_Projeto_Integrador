@@ -1,0 +1,189 @@
+:root{
+    --cor-principal:#112B6D;
+    --cor-secundaria:#6A46F5;
+    --texto:#112B6D;
+    --fundo:#F1F3F8;
+    --fonte:"Segoe UI",Arial,sans-serif;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    background:var(--fundo);
+    font-family:var(--fonte);
+    color:var(--texto);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    position: relative
+
+}
+
+
+.topo-etiqueta {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    z-index: 100;
+}
+
+.topo-etiqueta .icon {
+    width: 32px;
+    height: 32px;
+}
+
+@media print {
+    .topo-etiqueta,
+    .botao-print {
+        display: none;
+    }
+}
+
+
+.pagina-impressao{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(3,260px);
+    justify-content:center;
+    gap:20px;
+    padding:30px;
+}
+
+.etiqueta h2{
+    width:100%;
+    font-size:22px;
+    font-weight:700;
+    color:var(--cor-principal);
+    padding-bottom:8px;
+    margin-bottom:12px;
+    border-bottom:1px solid #D8D8D8;
+}
+
+
+.etiqueta img{
+    width:95px;
+    height:95px;
+    object-fit:contain;
+    margin-bottom:15px;
+}
+
+
+.etiqueta p{
+    font-size:20px;
+    font-weight:bold;
+    color:#000;
+    letter-spacing:1px;
+    margin-bottom:5px;
+}
+
+
+.etiqueta span{
+    font-size:15px;
+    color:#444;
+    font-weight:600;
+}
+
+
+.acoes-impressao{
+    width:100%;
+    text-align:center;
+    margin:30px 0;
+}
+
+.btn-imprimir{
+    background:var(--cor-principal);
+    color:#FFF;
+    border:none;
+    border-radius:8px;
+    padding:12px 35px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-imprimir:hover{
+    background:var(--cor-secundaria);
+}
+
+.btn-voltar-patrimonio{
+    text-decoration:none;
+    color:var(--cor-principal);
+    font-weight:bold;
+}
+
+
+.topo-impressao{
+    position:absolute;
+    top:20px;
+    right:30px;
+}
+
+.topo-impressao .icon{
+    width:28px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.topo-impressao .icon:hover{    
+    transform:scale(1.08);
+}
+
+/* OCULTAR TABELA */
+
+#tabelaQRCode{
+    display:none;
+}
+
+/* IMPRESSÃO */
+
+@page{
+
+    size:A4 portrait;
+
+    margin:12px;
+}
+
+@media print{
+
+    body{
+
+        background:#FFF;
+    }
+
+    .topo-impressao,
+    .acoes-impressao{
+
+        display:none !important;
+    }
+
+.pagina-impressao{
+    width:794px;
+    display:grid;
+    grid-template-columns:repeat(3,250px);
+    justify-content:center;
+    gap:15px;
+    padding:0;
+    margin:0 auto;
+}
+
+
+.etiqueta{
+    width:235px;
+    height:210px;
+    background:#FFF;
+    border:1px solid #666;
+    border-radius:6px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:15px;    
+}
+}

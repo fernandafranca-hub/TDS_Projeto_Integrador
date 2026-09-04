@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeepYou - Login</title>
+    <link rel="stylesheet" type="text/css" href="public/css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <main class="login-container">
+            <div class="login-card">
+                <header class="logo-area">
+                    <img src="public/img/1.png" alt="LogoBeepYou">
+                    <h2>Bem-vindo ao BeepYou</h2>
+                </header>
+                <form action="app/controllers/login.php" method="post" class="form-login" autocomplete="off">                    
+                    <label for="email">E-mail</label> 
+                    <input type="email" id="email" name="username" class="buscar" placeholder="seu@email.com" autocomplete="new-username" value="" required >
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="password" class="buscar" placeholder="Digite sua senha" autocomplete="new-password" value="" required>                 
+                    <div class="options">
+                        <a href="app/views/recuperarSenha.php">Esqueceu sua senha?</a>
+                    </div>
+                    <button type="submit" class="btn-entrar">Entrar</button>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="public/js/configuracoes.js"></script>
+</html>
